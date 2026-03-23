@@ -4,8 +4,162 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="src/styles/index.css" />
   </head>
   <body>
-    <h1>Hello world!</h1>
+    <img src="src/assets/App Name.svg" alt="Logo do petshop" id="logo" />
+    <main>
+    <header id="header-main">
+      <div id="header-p">
+        <h1>Sua agenda</h1>
+        <p>
+          Aqui você pode ver todos os clientes e serviços agendados para hoje.
+        </p>
+      </div>
+      <div id="div-date">
+        <img src="src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="Ícone de calendário" id="icon-calendar">
+        <input type="date" name="date" id="date" />
+        <img src="src/assets/Icon.svg" alt="">
+    </div>
+    </header>
+
+    
+      <section class="periods">
+        <!-- Cabeçalho do período -->
+        <div class="period"><header class="period-header">
+          <div>
+            <img
+              src="src/assets/Sun-Fog--Streamline-Solar.svg"
+              alt="ícone de sol"
+            />
+
+            <span class="period-title">Manhã</span>
+          </div>
+          <span class="period-time">09h–12h</span>
+        </header>
+
+        <!-- Lista de agendamentos -->
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <!-- Lado esquerdo -->
+            <div class="schedule-info">
+              <span class="schedule-hour">09:00</span>
+
+              <div class="schedule-client">
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
+            </div>
+
+            <!-- Meio -->
+            <span class="schedule-service"> Vacinação </span>
+
+            <!-- Direita -->
+            <button class="schedule-remove">Remover agendamento</button>
+          </li>
+        </ul></div>
+        <div class="period"><header class="period-header">
+          <div>
+            <img
+              src="src/assets/Cloud-Sun-4--Streamline-Solar.svg"
+              alt="ícone de sol"
+            />
+
+            <span class="period-title">Tarde</span>
+          </div>
+          <span class="period-time">13h–18h</span>
+        </header>
+
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <!-- Lado esquerdo -->
+            <div class="schedule-info">
+              <span class="schedule-hour">09:00</span>
+
+              <div class="schedule-client">
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
+            </div>
+
+            <!-- Meio -->
+            <span class="schedule-service"> Vacinação </span>
+
+            <!-- Direita -->
+            <button class="schedule-remove">Remover agendamento</button>
+          </li>
+          <li class="schedule-item">
+            <!-- Lado esquerdo -->
+            <div class="schedule-info">
+              <span class="schedule-hour">09:00</span>
+
+              <div class="schedule-client">
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
+            </div>
+
+            <!-- Meio -->
+            <span class="schedule-service"> Vacinação </span>
+
+            <!-- Direita -->
+            <button class="schedule-remove">Remover agendamento</button>
+          </li>
+          <li class="schedule-item">
+            <!-- Lado esquerdo -->
+            <div class="schedule-info">
+              <span class="schedule-hour">09:00</span>
+
+              <div class="schedule-client">
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
+            </div>
+
+            <!-- Meio -->
+            <span class="schedule-service"> Vacinação </span>
+
+            <!-- Direita -->
+            <button class="schedule-remove">Remover agendamento</button>
+          </li>
+        </ul></div>
+
+        <div class="period"><header class="period-header">
+          <div>
+            <img
+              src="src/assets/Moon-Stars--Streamline-Solar.svg"
+              alt="ícone de lua"
+            />
+
+            <span class="period-title">Noite</span>
+          </div>
+          <span class="period-time">19h–21h</span>
+        </header>
+
+        <ul class="schedule-list">
+          <li class="schedule-item">
+            <!-- Lado esquerdo -->
+            <div class="schedule-info">
+              <span class="schedule-hour">09:00</span>
+
+              <div class="schedule-client">
+                <strong>Thor</strong>
+                <span>/ Fernanda Costa</span>
+              </div>
+            </div>
+
+            <!-- Meio -->
+            <span class="schedule-service"> Vacinação </span>
+
+            <!-- Direita -->
+            <button class="schedule-remove">Remover agendamento</button>
+          </li>
+
+
+        
+        </div>
+
+      </section>
+    </main>
   </body>
 </html>
