@@ -1,0 +1,50 @@
+:root {
+  /* Colors*/
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  /* Fonts */
+  --font-family-title: "Inter Tight", sans-serif;
+  --font-family-base: "Inter", sans-serif;
+
+  --title: 700 1.5rem/2rem var(--font-family-title);
+
+  --paragraph-medium: 500 0.875rem/1.5rem var(--font-family-base);
+  --paragraph-small: 500 0.75rem/1rem var(--font-family-base);
+
+  --label-large: 700 1rem/1.5rem var(--font-family-base);
+  --label-medium: 700 0.875rem/1.5rem var(--font-family-base);
+  --label-small: 700 0.75rem/1rem var(--font-family-base);
+
+  --link: 500 0.75rem/1rem var(--font-family-base);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: var(--paragraph-small);
+}
