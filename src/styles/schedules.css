@@ -46,3 +46,37 @@ h1 {
   width: 1.1rem;
   height: 1.1rem;
 }
+
+.periods {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.period {
+  background-color: var(--background-tertiary);
+  border-radius: 0.5rem;
+}
+
+.period-title {
+  font: var(--label-large);
+  color: var(--content-primary);
+}
+
+.period-time {
+  font: var(--label-large);
+  color: var(--content-secondary);
+}
+
+.period-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid var(--border-divisor);
+}
+
+.period-header div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
