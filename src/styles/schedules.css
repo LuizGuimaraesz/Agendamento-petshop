@@ -1,1 +1,48 @@
+h1 {
+  font: var(--title);
+  color: var(--content-primary);
+}
 
+#header-p p {
+  font: var(--paragraph-medium);
+  color: var(--content-secondary);
+}
+
+#header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#div-date {
+  border: 1px solid var(--border-divisor);
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.7rem;
+  cursor: pointer;
+}
+
+#date {
+  font: var(--label-small);
+  color: var(--content-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+}
+
+#date:focus {
+  outline: none;
+}
+
+#icon-calendar {
+  width: 1.1rem;
+  height: 1.1rem;
+}

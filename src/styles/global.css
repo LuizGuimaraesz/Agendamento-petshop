@@ -47,4 +47,11 @@
 
 body {
   font: var(--paragraph-small);
+  background-color: var(--background-primary);
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
