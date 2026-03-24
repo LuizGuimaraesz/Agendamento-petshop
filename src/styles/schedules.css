@@ -23,6 +23,11 @@ h1 {
   border-radius: 0.5rem;
   padding: 0.75rem 0.7rem;
   cursor: pointer;
+  transition: ease-in-out 0.5s;
+}
+
+#div-date:hover {
+  border-color: var(--content-secondary);
 }
 
 #date {
@@ -81,6 +86,12 @@ h1 {
   gap: 0.5rem;
 }
 
+.schedule-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .schedule-hour {
   font: var(--label-medium);
   color: var(--content-primary);
@@ -99,13 +110,19 @@ h1 {
 .schedule-service {
   font: var(--paragraph-small);
   color: var(--content-secondary);
+  padding-right: 3.07rem;
 }
 
 .schedule-remove {
-  font: var(--paragraph-small);
+  font: var(--link);
   color: var(--content-tertiary);
   background: none;
   border: none;
+}
+
+.schedule-remove:hover {
+  color: var(--content-primary);
+  text-decoration: underline;
   cursor: pointer;
 }
 
@@ -130,10 +147,38 @@ h1 {
   padding-bottom: 1.8rem;
 }
 
+#new-schedule {
+  position: fixed;
+  bottom: 2.2rem;
+  right: clamp(1rem, calc((100vw - 48rem) / 2 + 1rem), 5rem);
+  background-color: var(--background-brand);
+  color: var(--background-primary);
+  font: var(--label-large);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  box-shadow: 0 0 1.5rem rgba(146, 130, 250, 0.35);
+}
+
+#new-schedule:hover {
+  background-color: var(--background-highlights);
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   #header-main {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  #new-schedule {
+    position: static;
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .schedule-service {
+    padding: 0;
   }
 }
