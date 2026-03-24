@@ -162,7 +162,54 @@
 
     <div class="modal-overlay hidden">
       <div class="modal">
-       <button class="close-modal">X</button>
+
+       <header class="modal-header">
+         <div class="modal-header-info"><h2>Agende um atendimento</h2>
+         <p>Preencha os dados do cliente para realizar o agendamento:</p></div>
+          <button class="close-modal">X</button>
+       </header>
+
+       <form action="" class="modal-form">
+          
+            <label for="tutor-name">Nome do tutor</label>
+            <div class="tutor-input">
+              <img src="src/assets/User--Streamline-Solar.svg" alt="">
+              <input type="text" id="tutor-name" name="tutor-name" required>
+            </div>
+
+            <label for="pet-name">Nome do pet</label>
+            <div class="pet-input">
+              <img src="src/assets/Pet-Paw--Streamline-Core.svg" alt="">
+              <input type="text" id="pet-name" name="pet-name" required>
+            </div>
+
+          <label for="telefone">Telefone</label>
+          <div class="telefone-input">
+            <img src="src/assets/Phone--Streamline-Solar.svg" alt="">
+            <input type="tel" id="telefone" name="telefone" required>
+          </div>
+
+          <label for="service">Descrição do serviço</label>
+    
+            
+            <input type="text" id="service" name="service" required>
+          
+
+          <div class="date-time"><label for="date">Data</label>
+          <div class="date-input">
+            <img src="src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <label for="hour">Hora</label>
+          <div class="hour-input">
+            <img src="src/assets/Clock-Circle--Streamline-Solar.svg" alt="">
+            <input type="time" id="hour" name="hour" required>
+          </div></div>
+
+          <button type="submit">Agendar</button>
+       </form>
+      
 
       </div>
     </div>
