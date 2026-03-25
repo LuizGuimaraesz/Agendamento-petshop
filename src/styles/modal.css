@@ -7,6 +7,7 @@
   justify-content: center;
   align-items: center;
   z-index: 999;
+  animation: fadeIn 0.3s ease forwards;
 }
 
 .modal {
@@ -17,6 +18,10 @@
   width: 28%;
   display: flex;
   flex-direction: column;
+  animation: fadeIn 0.3s ease forwards;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.3s ease forwards;
 }
 
 .modal-content {
@@ -86,15 +91,18 @@
 
 .div-input:hover {
   border-color: var(--content-secondary);
+  transition: ease-in-out 0.3s;
 }
 
 .div-input:focus-within {
   border-color: var(--background-brand);
+  transition: ease-in-out 0.3s;
 }
 
 .div-input input:focus-within {
   outline: none;
   color: var(--content-primary);
+  transition: ease-in-out 0.3s;
 }
 
 .div-input input {
@@ -120,12 +128,14 @@
 
 #service:hover {
   border-color: var(--content-secondary);
+  transition: ease-in-out 0.3s;
 }
 
 #service:focus {
   border-color: var(--background-brand);
   outline: none;
   color: var(--content-primary);
+  transition: ease-in-out 0.3s;
 }
 
 .datetime {
@@ -145,9 +155,12 @@
 
 .datetime-input:hover {
   border-color: var(--content-secondary);
+  color: var(--content-primary);
+  transition: ease-in-out 0.3s;
 }
 .datetime-input:focus-within {
   border-color: var(--background-brand);
+  transition: ease-in-out 0.3s;
 }
 
 #time,
@@ -163,8 +176,11 @@
   opacity: 0;
 }
 
-#time:focus {
+#time:focus,
+#date:focus {
   outline: none;
+  color: var(--content-primary);
+  transition: ease-in-out 0.3s;
 }
 
 #button-schedule {
@@ -190,9 +206,32 @@
 @media (max-width: 600px) {
   .modal {
     width: 90%;
+    height: 90%;
   }
 
   .modal-content {
     padding: 1rem 0.5rem;
+  }
+
+  .datetime {
+    grid-template-columns: 1fr;
+  }
+
+  #button-schedule {
+    margin-bottom: 1rem;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Modal subindo */
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
