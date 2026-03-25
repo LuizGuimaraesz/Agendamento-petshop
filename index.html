@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Agendamento petshop</title>
     <link rel="stylesheet" href="src/styles/index.css" />
   </head>
   <body>
@@ -163,37 +163,43 @@
     <div class="modal-overlay hidden">
       <div class="modal">
 
-       <header class="modal-header">
-         <div class="modal-header-info"><h2>Agende um atendimento</h2>
+       <div class="modal-content">
+        <header class="modal-header">
+         <h2>Agende um atendimento</h2>
          <p>Preencha os dados do cliente para realizar o agendamento:</p></div>
-          <button class="close-modal">X</button>
+          
        </header>
 
        <form action="" class="modal-form">
           
-            <label for="tutor-name">Nome do tutor</label>
-            <div class="tutor-input">
+            <div class="modal-form-group">
+              <label for="tutor-name">Nome do tutor</label>
+            <div class="div-input">
               <img src="src/assets/User--Streamline-Solar.svg" alt="">
               <input type="text" id="tutor-name" name="tutor-name" required>
             </div>
+          </div>
 
-            <label for="pet-name">Nome do pet</label>
-            <div class="pet-input">
+            <div class="modal-form-group">
+              <label for="pet-name">Nome do pet</label>
+            <div class="div-input">
               <img src="src/assets/Pet-Paw--Streamline-Core.svg" alt="">
               <input type="text" id="pet-name" name="pet-name" required>
             </div>
+          </div>
 
-          <label for="telefone">Telefone</label>
-          <div class="telefone-input">
+          <div class="modal-form-group">
+            <label for="telefone">Telefone</label>
+          <div class="div-input"> 
             <img src="src/assets/Phone--Streamline-Solar.svg" alt="">
             <input type="tel" id="telefone" name="telefone" required>
           </div>
+        </div>
 
-          <label for="service">Descrição do serviço</label>
-    
-            
+          <div class="group-service">
+            <label for="service">Descrição do serviço</label>
             <input type="text" id="service" name="service" required>
-          
+          </div>
 
           <div class="date-time"><label for="date">Data</label>
           <div class="date-input">
@@ -208,7 +214,7 @@
           </div></div>
 
           <button type="submit">Agendar</button>
-       </form>
+       </form></div>
       
 
       </div>
