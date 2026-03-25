@@ -1,0 +1,18 @@
+{
+  "schedules": [
+    {
+      "id": 1,
+      "name": "Banho e Tosa",
+      "date": "2024-06-01",
+      "time": "10:00",
+      "petName": "Rex"
+    },
+    {
+      "id": 2,
+      "name": "Consulta Veterinária",
+      "date": "2024-06-02",
+      "time": "14:00",
+      "petName": "Luna"
+    }
+  ]
+}
