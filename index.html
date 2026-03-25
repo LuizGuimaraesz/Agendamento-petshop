@@ -166,7 +166,8 @@
        <div class="modal-content">
         <header class="modal-header">
          <h2>Agende um atendimento</h2>
-         <p>Preencha os dados do cliente para realizar o agendamento:</p></div>
+         <p>Preencha os dados do cliente para realizar o agendamento:</p>
+        
           
        </header>
 
@@ -201,24 +202,33 @@
             <input type="text" id="service" name="service" required>
           </div>
 
-          <div class="date-time"><label for="date">Data</label>
-          <div class="date-input">
+          <div class="datetime">
+           <div class="modal-form-group"> <label for="date">Data</label>
+          <div class="datetime-input">
             <img src="src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
             <input type="date" id="date" name="date" required>
+            <img src="src/assets/Icon.svg" alt="">
           </div>
+        </div>
 
-          <label for="hour">Hora</label>
-          <div class="hour-input">
+          <div class="datetime-group"><label for="time">Hora</label>
+          <div class="datetime-input">
             <img src="src/assets/Clock-Circle--Streamline-Solar.svg" alt="">
-            <input type="time" id="hour" name="hour" required>
-          </div></div>
+            <input type="time" id="time" name="time" required>
+            <img src="src/assets/Icon.svg" alt="">
+          </div>
+        </div>
+        </div>
 
-          <button type="submit">Agendar</button>
-       </form></div>
-      
-
+          <button type="submit" id="button-schedule">Agendar</button>
+       </form>
+       </div>
       </div>
     </div>
+      
+
+      
+
     <script src="src/modal.js"></script>
   </body>
 </html>

@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(4px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,10 +11,10 @@
 
 .modal {
   background-color: var(--background-tertiary);
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   padding: 1.5rem;
-  height: 85%;
-  width: 30%;
+  height: 80%;
+  width: 28%;
   display: flex;
   flex-direction: column;
 }
@@ -22,8 +22,7 @@
 .modal-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .modal-header {
@@ -85,8 +84,17 @@
   border: 1px solid var(--border-primary);
 }
 
+.div-input:hover {
+  border-color: var(--content-secondary);
+}
+
+.div-input:focus-within {
+  border-color: var(--background-brand);
+}
+
 .div-input input:focus-within {
   outline: none;
+  color: var(--content-primary);
 }
 
 .div-input input {
@@ -110,6 +118,71 @@
   font: var(--paragraph-medium);
 }
 
+#service:hover {
+  border-color: var(--content-secondary);
+}
+
+#service:focus {
+  border-color: var(--background-brand);
+  outline: none;
+  color: var(--content-primary);
+}
+
+.datetime {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.datetime-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--border-primary);
+}
+
+.datetime-input:hover {
+  border-color: var(--content-secondary);
+}
+.datetime-input:focus-within {
+  border-color: var(--background-brand);
+}
+
+#time,
+#date {
+  background: none;
+  border: none;
+  color: var(--content-secondary);
+  font: var(--paragraph-medium);
+  width: 100%;
+}
+
+#time::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+#time:focus {
+  outline: none;
+}
+
+#button-schedule {
+  background-color: var(--background-brand);
+  color: var(--background-primary);
+  font: var(--label-large);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 2rem;
+}
+
+#button-schedule:hover {
+  background-color: var(--background-highlights);
+}
+
 .hidden {
   display: none;
 }
@@ -117,5 +190,9 @@
 @media (max-width: 600px) {
   .modal {
     width: 90%;
+  }
+
+  .modal-content {
+    padding: 1rem 0.5rem;
   }
 }
