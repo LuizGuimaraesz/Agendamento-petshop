@@ -21,9 +21,19 @@ module.exports = {
 
   module: {
     rules: [
+      // CSS
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+
+      // JS com Babel ✅
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
       },
     ],
   },
@@ -33,6 +43,7 @@ module.exports = {
       template: "./index.html",
     }),
 
+    // copiar imagens/assets
     new CopyWebpackPlugin({
       patterns: [
         {
