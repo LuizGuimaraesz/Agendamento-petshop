@@ -111,6 +111,10 @@
   width: 100%;
 }
 
+.div-input input:webkit-autofill {
+  background-color: var(--background-tertiary);
+}
+
 .group-service {
   display: flex;
   flex-direction: column;
@@ -164,7 +168,7 @@
 }
 
 #time,
-#date {
+#modal-date {
   background: none;
   border: none;
   color: var(--content-secondary);
@@ -177,7 +181,7 @@
 }
 
 #time:focus,
-#date:focus {
+#modal-date:focus {
   outline: none;
   color: var(--content-primary);
   transition: ease-in-out 0.3s;

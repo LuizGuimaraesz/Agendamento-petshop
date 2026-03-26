@@ -55,3 +55,13 @@ main {
   margin: 2rem auto;
   padding: 0 1rem;
 }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--background-tertiary) inset;
+  -webkit-text-fill-color: var(--content-primary);
+  border: 1px solid var(--border-primary);
+
+  transition: background-color 5000s ease-in-out 0s;
+}

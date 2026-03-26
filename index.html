@@ -4,231 +4,166 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Agendamento petshop</title>
-    <link rel="stylesheet" href="src/styles/index.css" />
   </head>
+
   <body>
-    <img src="src/assets/App Name.svg" alt="Logo do petshop" id="logo" />
+    <img src="./assets/App Name.svg" alt="Logo do petshop" id="logo" />
+
     <main>
-    <header id="header-main">
-      <div id="header-p">
-        <h1>Sua agenda</h1>
-        <p>
-          Aqui você pode ver todos os clientes e serviços agendados para hoje.
-        </p>
-      </div>
-      <div id="div-date">
-        <img src="src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="Ícone de calendário" id="icon-calendar">
-        <input type="date" name="date" id="date" />
-        <img src="src/assets/Icon.svg" alt="">
-    </div>
-    </header>
+      <header id="header-main">
+        <div id="header-p">
+          <h1>Sua agenda</h1>
+          <p>
+            Aqui você pode ver todos os clientes e serviços agendados para hoje.
+          </p>
+        </div>
 
-    
+        <div id="div-date">
+          <img
+            src="./assets/Calendar-Minimalistic--Streamline-Solar.svg"
+            alt=""
+          />
+
+          <input type="date" name="date" id="date" />
+
+          <img src="./assets/Icon.svg" alt="" />
+        </div>
+      </header>
+
       <section class="periods">
-        <!-- Cabeçalho do período -->
-        <div class="period"><header class="period-header">
-          <div>
-            <img
-              src="src/assets/Sun-Fog--Streamline-Solar.svg"
-              alt="ícone de sol"
-            />
+        <!-- MANHÃ -->
 
-            <span class="period-title">Manhã</span>
-          </div>
-          <span class="period-time">09h–12h</span>
-        </header>
+        <div class="period">
+          <header class="period-header">
+            <div>
+              <img src="./assets/Sun-Fog--Streamline-Solar.svg" alt="" />
 
-        <!-- Lista de agendamentos -->
-        <ul class="schedule-list">
-          <li class="schedule-item">
-            <!-- Lado esquerdo -->
-            <div class="schedule-info">
-              <span class="schedule-hour">09:00</span>
-
-              <div class="schedule-client">
-                <strong>Thor</strong>
-                <span>/ Fernanda Costa</span>
-              </div>
+              <span class="period-title">Manhã</span>
             </div>
 
-            <!-- Meio -->
-            <span class="schedule-service"> Vacinação </span>
+            <span class="period-time">09h–12h</span>
+          </header>
 
-            <!-- Direita -->
-            <button class="schedule-remove">Remover agendamento</button>
-          </li>
-        </ul></div>
-        <div class="period"><header class="period-header">
-          <div>
-            <img
-              src="src/assets/Cloud-Sun-4--Streamline-Solar.svg"
-              alt="ícone de sol"
-            />
+          <ul class="schedule-list"></ul>
+        </div>
 
-            <span class="period-title">Tarde</span>
-          </div>
-          <span class="period-time">13h–18h</span>
-        </header>
+        <!-- TARDE -->
 
-        <ul class="schedule-list">
-          <li class="schedule-item">
-            <!-- Lado esquerdo -->
-            <div class="schedule-info">
-              <span class="schedule-hour">09:00</span>
+        <div class="period">
+          <header class="period-header">
+            <div>
+              <img src="./assets/Cloud-Sun-4--Streamline-Solar.svg" alt="" />
 
-              <div class="schedule-client">
-                <strong>Thor</strong>
-                <span>/ Fernanda Costa</span>
-              </div>
+              <span class="period-title">Tarde</span>
             </div>
 
-            <!-- Meio -->
-            <span class="schedule-service"> Vacinação </span>
+            <span class="period-time">13h–18h</span>
+          </header>
 
-            <!-- Direita -->
-            <button class="schedule-remove">Remover agendamento</button>
-          </li>
-          <li class="schedule-item">
-            <!-- Lado esquerdo -->
-            <div class="schedule-info">
-              <span class="schedule-hour">09:00</span>
+          <ul class="schedule-list"></ul>
+        </div>
 
-              <div class="schedule-client">
-                <strong>Thor</strong>
-                <span>/ Fernanda Costa</span>
-              </div>
+        <!-- NOITE -->
+
+        <div class="period">
+          <header class="period-header">
+            <div>
+              <img src="./assets/Moon-Stars--Streamline-Solar.svg" alt="" />
+
+              <span class="period-title">Noite</span>
             </div>
 
-            <!-- Meio -->
-            <span class="schedule-service"> Vacinação </span>
+            <span class="period-time">19h–21h</span>
+          </header>
 
-            <!-- Direita -->
-            <button class="schedule-remove">Remover agendamento</button>
-          </li>
-          <li class="schedule-item">
-            <!-- Lado esquerdo -->
-            <div class="schedule-info">
-              <span class="schedule-hour">09:00</span>
-
-              <div class="schedule-client">
-                <strong>Thor</strong>
-                <span>/ Fernanda Costa</span>
-              </div>
-            </div>
-
-            <!-- Meio -->
-            <span class="schedule-service"> Vacinação </span>
-
-            <!-- Direita -->
-            <button class="schedule-remove">Remover agendamento</button>
-          </li>
-        </ul></div>
-
-        <div class="period"><header class="period-header">
-          <div>
-            <img
-              src="src/assets/Moon-Stars--Streamline-Solar.svg"
-              alt="ícone de lua"
-            />
-
-            <span class="period-title">Noite</span>
-          </div>
-          <span class="period-time">19h–21h</span>
-        </header>
-
-        <ul class="schedule-list">
-          <li class="schedule-item">
-            <!-- Lado esquerdo -->
-            <div class="schedule-info">
-              <span class="schedule-hour">09:00</span>
-
-              <div class="schedule-client">
-                <strong>Thor</strong>
-                <span>/ Fernanda Costa</span>
-              </div>
-            </div>
-
-            <!-- Meio -->
-            <span class="schedule-service"> Vacinação </span>
-
-            <!-- Direita -->
-            <button class="schedule-remove">Remover agendamento</button>
-          </li>
+          <ul class="schedule-list"></ul>
         </div>
       </section>
-      
     </main>
+
     <button id="new-schedule">NOVO AGENDAMENTO</button>
 
     <div class="modal-overlay hidden">
       <div class="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Agende um atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+          </header>
 
-       <div class="modal-content">
-        <header class="modal-header">
-         <h2>Agende um atendimento</h2>
-         <p>Preencha os dados do cliente para realizar o agendamento:</p>
-        
-          
-       </header>
-
-       <form action="" class="modal-form">
-          
+          <form class="modal-form">
             <div class="modal-form-group">
-              <label for="tutor-name">Nome do tutor</label>
-            <div class="div-input">
-              <img src="src/assets/User--Streamline-Solar.svg" alt="">
-              <input type="text" id="tutor-name" name="tutor-name" required>
+              <label>Nome do tutor</label>
+
+              <div class="div-input">
+                <img src="./assets/User--Streamline-Solar.svg" alt="" />
+
+                <input type="text" id="tutor-name" required />
+              </div>
             </div>
-          </div>
 
             <div class="modal-form-group">
-              <label for="pet-name">Nome do pet</label>
-            <div class="div-input">
-              <img src="src/assets/Pet-Paw--Streamline-Core.svg" alt="">
-              <input type="text" id="pet-name" name="pet-name" required>
+              <label>Nome do pet</label>
+
+              <div class="div-input">
+                <img src="./assets/Pet-Paw--Streamline-Core.svg" alt="" />
+
+                <input type="text" id="pet-name" required />
+              </div>
             </div>
-          </div>
 
-          <div class="modal-form-group">
-            <label for="telefone">Telefone</label>
-          <div class="div-input"> 
-            <img src="src/assets/Phone--Streamline-Solar.svg" alt="">
-            <input type="tel" id="telefone" name="telefone" required>
-          </div>
+            <div class="modal-form-group">
+              <label>Telefone</label>
+
+              <div class="div-input">
+                <img src="./assets/Phone--Streamline-Solar.svg" alt="" />
+
+                <input type="tel" id="telefone" required />
+              </div>
+            </div>
+
+            <div class="group-service">
+              <label>Descrição do serviço</label>
+
+              <input type="text" id="service" required />
+            </div>
+
+            <div class="datetime">
+              <div class="modal-form-group">
+                <label>Data</label>
+
+                <div class="datetime-input">
+                  <img
+                    src="./assets/Calendar-Minimalistic--Streamline-Solar.svg"
+                    alt=""
+                  />
+
+                  <input type="date" id="modal-date" required />
+
+                  <img src="./assets/Icon.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="modal-form-group">
+                <label>Hora</label>
+
+                <div class="datetime-input">
+                  <img
+                    src="./assets/Clock-Circle--Streamline-Solar.svg"
+                    alt=""
+                  />
+
+                  <input type="time" id="time" required />
+
+                  <img src="./assets/Icon.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" id="button-schedule">Agendar</button>
+          </form>
         </div>
-
-          <div class="group-service">
-            <label for="service">Descrição do serviço</label>
-            <input type="text" id="service" name="service" required>
-          </div>
-
-          <div class="datetime">
-           <div class="modal-form-group"> <label for="date">Data</label>
-          <div class="datetime-input">
-            <img src="src/assets/Calendar-Minimalistic--Streamline-Solar.svg" alt="">
-            <input type="date" id="date" name="date" required>
-            <img src="src/assets/Icon.svg" alt="">
-          </div>
-        </div>
-
-          <div class="modal-form-group"><label for="time">Hora</label>
-          <div class="datetime-input">
-            <img src="src/assets/Clock-Circle--Streamline-Solar.svg" alt="">
-            <input type="time" id="time" name="time" required>
-            <img src="src/assets/Icon.svg" alt="">
-          </div>
-        </div>
-        </div>
-
-          <button type="submit" id="button-schedule">Agendar</button>
-       </form>
-       </div>
       </div>
     </div>
-      
-
-      
-
-    <script src="src/modal.js"></script>
   </body>
 </html>
