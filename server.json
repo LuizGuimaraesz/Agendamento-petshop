@@ -5,14 +5,16 @@
       "name": "Banho e Tosa",
       "date": "2024-06-01",
       "time": "10:00",
-      "petName": "Rex"
+      "petName": "Rex",
+      "telephone": 997839408
     },
     {
       "id": 2,
       "name": "Consulta Veterinária",
       "date": "2024-06-02",
       "time": "14:00",
-      "petName": "Luna"
+      "petName": "Luna",
+      "telephone": 997339409
     }
   ]
 }

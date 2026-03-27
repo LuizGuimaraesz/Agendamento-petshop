@@ -1,11 +1,10 @@
 import dayjs from "dayjs";
-import ptBR from "dayjs/locale/pt-br";
 
-// define idioma
-dayjs.locale(ptBR);
-
-// pega o input principal
 const date = document.querySelector("#date");
+const modalDate = document.querySelector("#modal-date");
+const currentDate = dayjs().format("YYYY-MM-DD");
 
-// define data atual
-date.value = dayjs().format("YYYY-MM-DD");
+modalDate.value = currentDate;
+modalDate.min = currentDate;
+date.value = currentDate;
+date.min = currentDate;
