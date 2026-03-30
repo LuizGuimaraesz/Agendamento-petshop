@@ -88,7 +88,6 @@ h1 {
 .schedule-service {
   font: var(--paragraph-small);
   color: var(--content-secondary);
-  padding-right: 3.07rem;
 }
 
 .schedule-remove {
