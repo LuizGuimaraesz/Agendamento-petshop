@@ -1,7 +1,7 @@
 import dayjs from "dayjs";
 
 const arrows = document.querySelectorAll(".arrow");
-const date = document.querySelectorAll(".date");
+export const date = document.querySelectorAll(".date");
 const currentDate = dayjs().format("YYYY-MM-DD");
 
 date.forEach((input) => {

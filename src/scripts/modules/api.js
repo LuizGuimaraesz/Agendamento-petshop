@@ -20,7 +20,7 @@ export async function getSchedules() {
 export async function newSchedule() {
   const petName = document.querySelector("#pet-name").value;
   const tutorName = document.querySelector("#tutor-name").value;
-  const date = document.querySelector(".date").value;
+  const date = document.querySelectorAll(".date")[1].value;
   const time = document.querySelector("#time").value;
   const telephone = document
     .querySelector("#telephone")

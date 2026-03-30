@@ -1,7 +1,10 @@
 import { getSchedules, newSchedule, deleteSchedule } from "./api.js";
 import { modal_overlay } from "./modal.js";
+import { date } from "./datetime.js";
 
 const form = document.querySelector(".modal-form");
+
+date[0].addEventListener("change", loadSchedules);
 
 async function loadSchedules() {
   const data = await getSchedules();
@@ -14,7 +17,11 @@ async function loadSchedules() {
   ulAfternoon.innerHTML = "";
   ulEvening.innerHTML = "";
 
-  data.forEach((schedule) => {
+  const filteredSchedules = data.filter(
+    (schedule) => schedule.date === date[0].value,
+  );
+
+  filteredSchedules.forEach((schedule) => {
     // li
     const li = document.createElement("li");
     li.classList.add("schedule-item");
