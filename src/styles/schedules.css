@@ -30,28 +30,6 @@ h1 {
   border-color: var(--content-secondary);
 }
 
-#date {
-  font: var(--label-small);
-  color: var(--content-secondary);
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-#date::-webkit-calendar-picker-indicator {
-  opacity: 0;
-  position: absolute;
-}
-
-#date:focus {
-  outline: none;
-}
-
-#icon-calendar {
-  width: 1.1rem;
-  height: 1.1rem;
-}
-
 .periods {
   display: flex;
   flex-direction: column;

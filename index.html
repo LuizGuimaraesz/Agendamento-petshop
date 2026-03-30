@@ -18,15 +18,15 @@
           </p>
         </div>
 
-        <div id="div-date">
+        <div class="datetime-input">
           <img
             src="./assets/Calendar-Minimalistic--Streamline-Solar.svg"
             alt=""
           />
 
-          <input type="date" name="date" id="date" />
+          <input type="date" class="date" required />
 
-          <img src="./assets/Icon.svg" alt="" />
+          <img src="./assets/Icon.svg" alt="" class="arrow" />
         </div>
       </header>
 
@@ -98,7 +98,12 @@
               <div class="div-input">
                 <img src="./assets/User--Streamline-Solar.svg" alt="" />
 
-                <input type="text" id="tutor-name" required />
+                <input
+                  type="text"
+                  id="tutor-name"
+                  pattern="[A-Za-zÀ-ÿ\s'-]+"
+                  required
+                />
               </div>
             </div>
 
@@ -108,7 +113,12 @@
               <div class="div-input">
                 <img src="./assets/Pet-Paw--Streamline-Core.svg" alt="" />
 
-                <input type="text" id="pet-name" required />
+                <input
+                  type="text"
+                  id="pet-name"
+                  pattern="[A-Za-zÀ-ÿ\s'-]+"
+                  required
+                />
               </div>
             </div>
 
@@ -118,14 +128,14 @@
               <div class="div-input">
                 <img src="./assets/Phone--Streamline-Solar.svg" alt="" />
 
-                <input type="tel" id="telefone" required />
+                <input type="tel" id="telephone" required />
               </div>
             </div>
 
             <div class="group-service">
               <label>Descrição do serviço</label>
 
-              <input type="text" id="service" required />
+              <textarea id="service" maxlength="60" required> </textarea>
             </div>
 
             <div class="datetime">
@@ -138,9 +148,9 @@
                     alt=""
                   />
 
-                  <input type="date" id="modal-date" required />
+                  <input type="date" class="date" required />
 
-                  <img src="./assets/Icon.svg" alt="" />
+                  <img src="./assets/Icon.svg" alt="" class="arrow" />
                 </div>
               </div>
 
@@ -155,7 +165,7 @@
 
                   <input type="time" id="time" required />
 
-                  <img src="./assets/Icon.svg" alt="" />
+                  <img src="./assets/Icon.svg" alt="" class="arrow" />
                 </div>
               </div>
             </div>

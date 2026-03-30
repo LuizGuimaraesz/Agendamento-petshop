@@ -168,7 +168,7 @@
 }
 
 #time,
-#modal-date {
+.date {
   background: none;
   border: none;
   color: var(--content-secondary);
@@ -176,15 +176,23 @@
   width: 100%;
 }
 
+.date::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
 #time::-webkit-calendar-picker-indicator {
   opacity: 0;
 }
 
 #time:focus,
-#modal-date:focus {
+.date:focus {
   outline: none;
   color: var(--content-primary);
   transition: ease-in-out 0.3s;
+}
+
+.arrow {
+  cursor: pointer;
 }
 
 #button-schedule {

@@ -1,10 +1,20 @@
 import dayjs from "dayjs";
 
-const date = document.querySelector("#date");
-const modalDate = document.querySelector("#modal-date");
+const arrows = document.querySelectorAll(".arrow");
+const date = document.querySelectorAll(".date");
 const currentDate = dayjs().format("YYYY-MM-DD");
 
-modalDate.value = currentDate;
-modalDate.min = currentDate;
-date.value = currentDate;
-date.min = currentDate;
+date.forEach((input) => {
+  input.value = currentDate;
+  input.min = currentDate;
+});
+
+arrows.forEach((arrow) => {
+  arrow.addEventListener("click", () => {
+    const input = arrow.parentElement.querySelector("input");
+
+    if (input.showPicker) {
+      input.showPicker();
+    }
+  });
+});
