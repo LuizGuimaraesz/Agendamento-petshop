@@ -64,6 +64,28 @@ h1 {
   gap: 0.5rem;
 }
 
+.schedule-item {
+  display: grid;
+
+  grid-template-columns:
+    320px
+    1fr
+    180px;
+
+  align-items: center;
+  padding: 1rem 1.6rem;
+  border-bottom: 0.5px solid var(--border-divisor);
+}
+
+.schedule-item:first-child {
+  padding-top: 1.8rem;
+}
+
+.schedule-item:last-child {
+  border-bottom: none;
+  padding-bottom: 1.8rem;
+}
+
 .schedule-info {
   display: flex;
   align-items: center;
@@ -88,6 +110,7 @@ h1 {
 .schedule-service {
   font: var(--paragraph-small);
   color: var(--content-secondary);
+  text-align: left;
 }
 
 .schedule-remove {
@@ -95,6 +118,7 @@ h1 {
   color: var(--content-tertiary);
   background: none;
   border: none;
+  justify-self: end;
 }
 
 .schedule-remove:hover {
@@ -105,23 +129,6 @@ h1 {
 
 .schedule-list {
   list-style: none;
-}
-
-.schedule-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.6rem;
-  border-bottom: 0.5px solid var(--border-divisor);
-}
-
-.schedule-item:first-child {
-  padding-top: 1.8rem;
-}
-
-.schedule-item:last-child {
-  border-bottom: none;
-  padding-bottom: 1.8rem;
 }
 
 #new-schedule {
