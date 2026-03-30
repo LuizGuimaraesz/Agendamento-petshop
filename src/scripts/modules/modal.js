@@ -1,4 +1,4 @@
-const modal_overlay = document.querySelector(".modal-overlay");
+export const modal_overlay = document.querySelector(".modal-overlay");
 const new_schedule = document.querySelector("#new-schedule");
 
 new_schedule.addEventListener("click", () => {

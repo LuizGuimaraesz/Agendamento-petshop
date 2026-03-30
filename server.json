@@ -1,22 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": 1,
-      "tutorName": "Adriana",
-      "date": "2024-06-01",
-      "time": "09:00",
-      "petName": "Rex",
-      "telephone": 997839408,
-      "service": "Banho e Tosa"
-    },
-    {
-      "id": 2,
-      "tutorName": "Carlos",
-      "date": "2024-06-02",
-      "time": "10:00",
-      "petName": "Luna",
-      "telephone": 997339409,
-      "service": "Consulta Veterinária"
-    }
-  ]
+  "schedules": []
 }

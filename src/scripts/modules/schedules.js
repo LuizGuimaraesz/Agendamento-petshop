@@ -1,4 +1,7 @@
-import { getSchedules } from "./api.js";
+import { getSchedules, newSchedule } from "./api.js";
+import { modal_overlay } from "./modal.js";
+
+const form = document.querySelector(".modal-form");
 
 async function loadSchedules() {
   const data = await getSchedules();
@@ -6,6 +9,10 @@ async function loadSchedules() {
   const ulMorning = document.querySelector(".morning .schedule-list");
   const ulAfternoon = document.querySelector(".afternoon .schedule-list");
   const ulEvening = document.querySelector(".evening .schedule-list");
+
+  ulMorning.innerHTML = "";
+  ulAfternoon.innerHTML = "";
+  ulEvening.innerHTML = "";
 
   data.forEach((schedule) => {
     // li
@@ -53,14 +60,30 @@ async function loadSchedules() {
     li.append(scheduleInfo, service, removeButton);
 
     // adicionar li na ul correta
-    if (schedule.time >= "09:00" && schedule.time <= "12:00") {
+
+    const scheduleTime = timeToNumber(schedule.time);
+
+    if (scheduleTime >= 9 && scheduleTime <= 12) {
       ulMorning.appendChild(li);
-    } else if (schedule.time > "12:00" && schedule.time <= "18:00") {
+    } else if (scheduleTime > 12 && scheduleTime <= 18) {
       ulAfternoon.appendChild(li);
-    } else if (schedule.time >= "19:00" && schedule.time <= "21:00") {
+    } else if (scheduleTime >= 19 && scheduleTime <= 21) {
       ulEvening.appendChild(li);
     }
   });
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  await newSchedule();
+
+  modal_overlay.classList.add("hidden");
+  loadSchedules();
+});
+
+function timeToNumber(time) {
+  return Number(time.split(":")[0]);
 }
 
 loadSchedules();
