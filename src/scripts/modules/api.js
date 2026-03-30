@@ -1,5 +1,6 @@
 const apiUrl = "http://localhost:3000";
 
+// Função para buscar os agendamentos da API
 export async function getSchedules() {
   try {
     const response = await fetch(`${apiUrl}/schedules`);

@@ -3,7 +3,9 @@ import { getSchedules } from "./api.js";
 async function loadSchedules() {
   const data = await getSchedules();
 
-  const ul = document.querySelector(".morning .schedule-list");
+  const ulMorning = document.querySelector(".morning .schedule-list");
+  const ulAfternoon = document.querySelector(".afternoon .schedule-list");
+  const ulEvening = document.querySelector(".evening .schedule-list");
 
   data.forEach((schedule) => {
     // li
@@ -50,7 +52,14 @@ async function loadSchedules() {
     // montar li
     li.append(scheduleInfo, service, removeButton);
 
-    ul.append(li);
+    // adicionar li na ul correta
+    if (schedule.time >= "09:00" && schedule.time <= "12:00") {
+      ulMorning.appendChild(li);
+    } else if (schedule.time > "12:00" && schedule.time <= "18:00") {
+      ulAfternoon.appendChild(li);
+    } else if (schedule.time >= "19:00" && schedule.time <= "21:00") {
+      ulEvening.appendChild(li);
+    }
   });
 }
 
