@@ -7,6 +7,7 @@ export async function getSchedules() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+
     return await response.json();
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -54,5 +55,22 @@ export async function newSchedule() {
     console.error("Error creating schedule:", error);
     alert("Não foi possível salvar o agendamento.");
     return null;
+  }
+}
+
+export async function deleteSchedule(id) {
+  try {
+    const response = await fetch(`${apiUrl}/schedules/${id}`, {
+      method: "DELETE",
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    alert("Agendamento removido com sucesso!");
+    return true;
+  } catch (error) {
+    console.error("Error deleting schedule:", error);
+    alert("Não foi possível remover o agendamento.");
+    return false;
   }
 }

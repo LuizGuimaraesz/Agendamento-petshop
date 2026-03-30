@@ -1,4 +1,4 @@
-import { getSchedules, newSchedule } from "./api.js";
+import { getSchedules, newSchedule, deleteSchedule } from "./api.js";
 import { modal_overlay } from "./modal.js";
 
 const form = document.querySelector(".modal-form");
@@ -55,6 +55,7 @@ async function loadSchedules() {
     const removeButton = document.createElement("button");
     removeButton.classList.add("schedule-remove");
     removeButton.textContent = "Remover agendamento";
+    removeButton.dataset.id = schedule.id;
 
     // montar li
     li.append(scheduleInfo, service, removeButton);
@@ -79,7 +80,18 @@ form.addEventListener("submit", async (e) => {
   await newSchedule();
 
   modal_overlay.classList.add("hidden");
-  loadSchedules();
+  await loadSchedules();
+});
+
+document.addEventListener("click", async (e) => {
+  if (e.target.classList.contains("schedule-remove")) {
+    const id = e.target.dataset.id;
+
+    if (confirm("Tem certeza que deseja remover este agendamento?")) {
+      await deleteSchedule(id);
+      await loadSchedules();
+    }
+  }
 });
 
 function timeToNumber(time) {
