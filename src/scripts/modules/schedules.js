@@ -1,10 +1,8 @@
 import { getSchedules, newSchedule, deleteSchedule } from "./api.js";
-import { modal_overlay } from "./modal.js";
-import { date } from "./datetime.js";
-
+import { date1, closeModal, cleanForm } from "./modal.js";
 const form = document.querySelector(".modal-form");
 
-date[0].addEventListener("change", loadSchedules);
+date1.addEventListener("change", loadSchedules);
 
 async function loadSchedules() {
   const data = await getSchedules();
@@ -18,7 +16,7 @@ async function loadSchedules() {
   ulEvening.innerHTML = "";
 
   const filteredSchedules = data.filter(
-    (schedule) => schedule.date === date[0].value,
+    (schedule) => schedule.date === date1.value,
   );
 
   filteredSchedules.forEach((schedule) => {
@@ -86,7 +84,9 @@ form.addEventListener("submit", async (e) => {
 
   await newSchedule();
 
-  modal_overlay.classList.add("hidden");
+  cleanForm();
+  closeModal();
+
   await loadSchedules();
 });
 
@@ -94,10 +94,8 @@ document.addEventListener("click", async (e) => {
   if (e.target.classList.contains("schedule-remove")) {
     const id = e.target.dataset.id;
 
-    if (confirm("Tem certeza que deseja remover este agendamento?")) {
-      await deleteSchedule(id);
-      await loadSchedules();
-    }
+    await deleteSchedule(id);
+    await loadSchedules();
   }
 });
 

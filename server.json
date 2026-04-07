@@ -1,31 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": "fca0",
-      "petName": "Bella",
-      "tutorName": "Luiz Guima",
-      "date": "2026-03-30",
-      "time": "12:00",
-      "telephone": "35997339409",
-      "service": " Banho e tosa"
-    },
-    {
-      "id": "6a89",
-      "petName": "Bella",
-      "tutorName": "Luiz ",
-      "date": "2026-03-30",
-      "time": "09:00",
-      "telephone": "35997339409",
-      "service": " Banho e "
-    },
-    {
-      "id": "41ce",
-      "petName": "Bella",
-      "tutorName": "rklnfkrgnrle",
-      "date": "2026-03-31",
-      "time": "09:00",
-      "telephone": "35997339409",
-      "service": " qww"
-    }
-  ]
+  "schedules": []
 }

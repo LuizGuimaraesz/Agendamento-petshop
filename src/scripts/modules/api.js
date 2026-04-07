@@ -12,7 +12,7 @@ export async function getSchedules() {
   } catch (error) {
     console.error("Error fetching data:", error);
     alert("Não foi possível listar os agendamentos.");
-    return null;
+    return [];
   }
 }
 
@@ -60,12 +60,16 @@ export async function newSchedule() {
 
 export async function deleteSchedule(id) {
   try {
+    if (!confirm("Tem certeza que deseja remover este agendamento?")) {
+      return false;
+    }
     const response = await fetch(`${apiUrl}/schedules/${id}`, {
       method: "DELETE",
     });
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
+
     alert("Agendamento removido com sucesso!");
     return true;
   } catch (error) {

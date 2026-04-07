@@ -1,6 +1,4 @@
-const tutorName = document.querySelector("#tutor-name");
-const petName = document.querySelector("#pet-name");
-const telephone = document.querySelector("#telephone");
+import { tutorName, petName, telephone } from "./modal.js";
 
 telephone.addEventListener("input", () => {
   let regex = telephone.value.replace(/\D/g, "");
@@ -20,7 +18,7 @@ telephone.addEventListener("input", () => {
 
 function onlyLetters(input) {
   input.addEventListener("input", () => {
-    regex = input.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, "");
+    let regex = input.value.replace(/[^A-Za-zÀ-ÿ\s'-]/g, "");
     input.value = regex;
   });
 }

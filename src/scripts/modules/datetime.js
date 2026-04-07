@@ -1,10 +1,26 @@
 import dayjs from "dayjs";
+import { dates } from "./modal.js";
 
 const arrows = document.querySelectorAll(".arrow");
-export const date = document.querySelectorAll(".date");
 const currentDate = dayjs().format("YYYY-MM-DD");
 
-date.forEach((input) => {
+export const hours = [
+  "09:00",
+  "10:00",
+  "11:00",
+  "12:00",
+  "13:00",
+  "14:00",
+  "15:00",
+  "16:00",
+  "17:00",
+  "18:00",
+  "19:00",
+  "20:00",
+  "21:00",
+];
+
+dates.forEach((input) => {
   input.value = currentDate;
   input.min = currentDate;
 });
