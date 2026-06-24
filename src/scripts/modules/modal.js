@@ -1,5 +1,7 @@
 export const modal_overlay = document.querySelector(".modal-overlay");
 const new_schedule = document.querySelector("#new-schedule");
+const close_modal = document.querySelector(".modal-close");
+const largeScreen = window.matchMedia("(min-width: 601px)");
 
 export const dates = document.querySelectorAll(".date");
 export const date1 = document.querySelectorAll(".date")[0];
@@ -31,8 +33,12 @@ new_schedule.addEventListener("click", () => {
   openModal();
 });
 
+close_modal.addEventListener("click", () => {
+  closeModal();
+});
+
 modal_overlay.addEventListener("click", (e) => {
-  if (e.target === modal_overlay) {
+  if (e.target === modal_overlay && largeScreen.matches) {
     closeModal();
   }
 });

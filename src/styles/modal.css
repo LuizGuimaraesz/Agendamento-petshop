@@ -23,10 +23,35 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  position: relative;
   animation: fadeIn 0.3s ease forwards;
   transform: translateY(20px);
   opacity: 0;
   animation: slideUp 0.3s ease forwards;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.625rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.modal-close img {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .modal-content {
@@ -222,6 +247,14 @@
   display: none;
 }
 
+@media (min-width: 601px) and (max-width: 1024px) {
+  .modal {
+    width: min(92vw, 38rem);
+    max-width: 38rem;
+    padding: 1.75rem 1.25rem;
+  }
+}
+
 @media (max-width: 600px) {
   .modal-overlay {
     align-items: flex-start;
@@ -231,6 +264,13 @@
     width: 100%;
     max-height: calc(100dvh - 2rem);
     padding: 1rem 0.75rem;
+  }
+
+  .modal-close {
+    top: 0.75rem;
+    right: 0.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   .modal-content {
