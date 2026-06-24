@@ -6,6 +6,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  overflow-y: auto;
   z-index: 999;
   animation: fadeIn 0.3s ease forwards;
 }
@@ -15,11 +17,12 @@
   border-radius: 0.75rem;
   padding: 1.5rem 1rem;
   height: auto;
-  max-height: 90vh;
-  width: 28%;
+  max-height: calc(100dvh - 2rem);
+  width: min(100%, 30rem);
   max-width: 500px;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
   animation: fadeIn 0.3s ease forwards;
   transform: translateY(20px);
   opacity: 0;
@@ -30,6 +33,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  min-width: 0;
 }
 
 .modal-header {
@@ -70,6 +74,7 @@
 .modal-form-group input {
   background: none;
   border: none;
+  min-width: 0;
 }
 
 .div-input {
@@ -101,6 +106,12 @@
   font: var(--paragraph-medium);
   color: var(--content-secondary);
   width: 100%;
+  min-width: 0;
+}
+
+.div-input img,
+.datetime-input img {
+  flex: 0 0 auto;
 }
 
 .div-input input:webkit-autofill {
@@ -120,6 +131,8 @@
   color: var(--content-secondary);
   border-radius: 0.6rem;
   font: var(--paragraph-medium);
+  min-height: 5rem;
+  resize: vertical;
 }
 
 #service:hover {
@@ -147,6 +160,7 @@
   padding: 0.6rem;
   border-radius: 0.6rem;
   border: 1px solid var(--border-primary);
+  min-width: 0;
 }
 
 .datetime-input:hover {
@@ -166,6 +180,7 @@
   color: var(--content-secondary);
   font: var(--paragraph-medium);
   width: 100%;
+  min-width: 0;
 }
 
 .date::-webkit-calendar-picker-indicator {
@@ -208,9 +223,14 @@
 }
 
 @media (max-width: 600px) {
+  .modal-overlay {
+    align-items: flex-start;
+  }
+
   .modal {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    max-height: calc(100dvh - 2rem);
+    padding: 1rem 0.75rem;
   }
 
   .modal-content {
@@ -222,7 +242,18 @@
   }
 
   #button-schedule {
+    width: 100%;
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .modal-header {
+    margin-bottom: 1.25rem;
+  }
+
+  .modal-content {
+    padding-inline: 0;
   }
 }
 

@@ -48,12 +48,35 @@
 body {
   font: var(--paragraph-small);
   background-color: var(--background-primary);
+  color: var(--content-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  width: min(100% - 2rem, 800px);
+  margin: 2rem auto 6rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+#logo {
+  display: block;
+  margin: 1rem 0 0 1rem;
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 1.5rem, 800px);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  #logo {
+    margin-left: 0.75rem;
+  }
 }
 
 input:-webkit-autofill,
