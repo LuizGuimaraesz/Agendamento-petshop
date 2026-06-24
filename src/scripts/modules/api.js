@@ -17,25 +17,7 @@ export async function getSchedules() {
 }
 
 // Função para adicionar um novo agendamento
-export async function newSchedule() {
-  const petName = document.querySelector("#pet-name").value;
-  const tutorName = document.querySelector("#tutor-name").value;
-  const date = document.querySelectorAll(".date")[1].value;
-  const time = document.querySelector("#time").value;
-  const telephone = document
-    .querySelector("#telephone")
-    .value.replace(/\D/g, "");
-  const service = document.querySelector("#service").value;
-
-  const scheduleData = {
-    petName,
-    tutorName,
-    date,
-    time,
-    telephone,
-    service,
-  };
-
+export async function newSchedule(scheduleData) {
   try {
     const response = await fetch(`${apiUrl}/schedules`, {
       method: "POST",
@@ -48,8 +30,6 @@ export async function newSchedule() {
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    alert("Agendamento salvo com sucesso!");
-
     return await response.json();
   } catch (error) {
     console.error("Error creating schedule:", error);
@@ -70,7 +50,6 @@ export async function deleteSchedule(id) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    alert("Agendamento removido com sucesso!");
     return true;
   } catch (error) {
     console.error("Error deleting schedule:", error);

@@ -25,12 +25,29 @@ dates.forEach((input) => {
   input.min = currentDate;
 });
 
+const timeInput = document.querySelector("#time");
+
+timeInput.innerHTML = '<option value="">Selecione</option>';
+
+hours.forEach((hour) => {
+  const option = document.createElement("option");
+
+  option.value = hour;
+  option.textContent = hour;
+
+  timeInput.appendChild(option);
+});
+
 arrows.forEach((arrow) => {
   arrow.addEventListener("click", () => {
-    const input = arrow.parentElement.querySelector("input");
+    const field = arrow.parentElement.querySelector("input, select");
 
-    if (input.showPicker) {
-      input.showPicker();
+    if (field.showPicker) {
+      field.showPicker();
+      return;
     }
+
+    field.focus();
+    field.click();
   });
 });

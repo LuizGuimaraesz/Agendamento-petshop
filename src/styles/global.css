@@ -20,8 +20,7 @@
   --accent-blue-light: #16487a;
   --accent-yellow: #f0dc02;
   --accent-yellow-light: #756e1b;
-  --accent-orange: #f09102;
-  --accent-orange-light: #75501b;
+  --feedback-error: #f87171;
 
   /* Fonts */
   --font-family-title: "Inter Tight", sans-serif;
